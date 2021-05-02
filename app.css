@@ -1,0 +1,138 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #474343;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+
+.music-container{
+    background: #1F1E1E;
+    width: 23rem;
+    height: 35rem;  
+    color: #FFF6F6;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.container{
+    width: 100%;
+    max-width: 90%;
+    overflow: hidden;
+}  
+
+.display-navigation{
+    display: flex;
+    justify-content: space-around;
+    padding: 1.5rem 0;
+}
+.display-navigation button{
+    color: #FFF6F6;
+    font-size: 0.8rem;
+    transition: all 0.3s;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1rem #000000;
+}
+button.icon{
+    background-color: #232323;
+    border: none;
+    padding: 0.8rem;
+    text-align: center;
+    cursor: pointer;
+}
+.display-navigation button:hover{
+    color: #EE5905;
+}
+
+.img-container{
+    width: 15rem;
+    border-radius: 50%;
+    margin: 0 auto;  
+    transition: all 0.3s;
+}
+
+.img-container img{
+    border-radius: 50%;
+    object-fit: cover;
+    height: 14rem;
+    width: inherit;
+    box-shadow: 1px 1px 2rem #000000;
+    animation: rotate 3s linear infinite;
+    animation-play-state: paused;
+}
+.music-container.play .img-container img{
+    animation-play-state: running;
+}
+
+@keyframes rotate{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+#title{
+    text-align: center;
+    margin: 1rem 0;
+}
+#title h1{
+    font-size: 2rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.progress-container{
+    background-color: #232323;
+    border-radius: 6px;
+    cursor: pointer;
+    margin: 2rem 0.5rem;
+    height: 1rem;
+    width: 100%;
+}
+.progress{
+    background: #EE5905;
+    height: 100%;
+    width: 0;
+    border-radius: 6px;
+    transition: width .1s linear;
+}
+
+.navigation{
+    display: flex;
+    justify-content: space-around;
+    z-index: 1;
+}
+button.action-btn{
+    color: #FFF6F6;
+    font-size: 1rem;
+    transition: all 0.3s;
+    border-radius: 50%;
+    box-shadow: 1px 1px 1rem #000000;
+}
+
+.action-btn{
+    background-color: #232323;
+    border: none;
+    padding: 1.2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+.action-btn.action-btn-big{
+    background-color: #EE5905;
+    font-size: 1.5rem;
+}
